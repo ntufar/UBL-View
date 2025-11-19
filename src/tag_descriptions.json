@@ -1,0 +1,10 @@
+{
+  "cbc:ID": "Invoice identifier",
+  "cbc:IssueDate": "Date the invoice was issued",
+  "cac:AccountingSupplierParty": "Supplier party information",
+  "cac:PartyName": "Name of the party",
+  "cbc:Name": "Party name",
+  "cbc:TaxAmount": "Tax amount for the invoice",
+  "cbc:PayableAmount": "Total amount payable",
+  "cbc:DocumentCurrencyCode": "Currency code of the invoice"
+}

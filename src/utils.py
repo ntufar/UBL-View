@@ -1,4 +1,18 @@
 import pandas as pd
+import json
+import os
+
+# Load tag descriptions relative to this file
+_tag_path = os.path.join(os.path.dirname(__file__), 'tag_descriptions.json')
+try:
+    with open(_tag_path, 'r') as _f:
+        TAG_DESCRIPTIONS = json.load(_f)
+except FileNotFoundError:
+    TAG_DESCRIPTIONS = {}
+
+def get_description(tag_name):
+    """Return a human‑readable description for a given tag, or a fallback."""
+    return TAG_DESCRIPTIONS.get(tag_name, "No description available.")
 
 # Color mapping based on PRD
 # Blue: Party/Entity Information (Who)
