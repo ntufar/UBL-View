@@ -48,5 +48,4 @@ Check out the deployed application here: **[https://ubl-view.streamlit.app/](htt
 
 **Nicolai Tufar**
 
----
-*Built with ❤️ for the e-invoicing community.*
+
