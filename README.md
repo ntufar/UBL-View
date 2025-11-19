@@ -1,6 +1,6 @@
-# UBL X-Ray
+# UBL View
 
-**UBL X-Ray** (or "The Glass Invoice") is a visual tool designed to "explode" complex UBL 2.1 / PEPPOL BIS electronic invoices into an interactive Sunburst chart. It helps developers, business analysts, and QA testers understand the structure and data of e-invoices without reading raw XML code.
+**UBL View** (or "The Glass Invoice") is a visual tool designed to "explode" complex UBL 2.1 / PEPPOL BIS electronic invoices into an interactive Sunburst chart. It helps developers, business analysts, and QA testers understand the structure and data of e-invoices without reading raw XML code.
 
 ## 🚀 Live Demo
 
