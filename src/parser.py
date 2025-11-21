@@ -34,7 +34,9 @@ def parse_ubl_xml(xml_content):
         "value": 0, # Let Plotly calculate based on children
         "tag_name": clean_tag(root.tag),
         "path": f"/{clean_tag(root.tag)}",
-        "text_value": ""
+        "text_value": "",
+        "attributes": root.attrib,
+        "original_element": root
     })
 
     def traverse(element, parent_id, path):
@@ -74,7 +76,9 @@ def parse_ubl_xml(xml_content):
                 "parent": parent_id,
                 "tag_name": tag, # Keep original tag name (without namespace) for display
                 "path": current_path,
-                "text_value": text_value
+                "text_value": text_value,
+                "attributes": child.attrib,
+                "original_element": child
             }
             
             if not has_children:

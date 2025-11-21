@@ -12,7 +12,17 @@ except FileNotFoundError:
 
 def get_description(tag_name):
     """Return a human‑readable description for a given tag, or a fallback."""
-    return TAG_DESCRIPTIONS.get(tag_name, "No description available.")
+    # 1. Exact match
+    if tag_name in TAG_DESCRIPTIONS:
+        return TAG_DESCRIPTIONS[tag_name]
+    
+    # 2. Try to find key that ends with tag_name (handling namespaces in JSON keys)
+    # e.g. "cac:AccountingSupplierParty" matches "AccountingSupplierParty"
+    for key, desc in TAG_DESCRIPTIONS.items():
+        if key.endswith(f":{tag_name}") or key == tag_name:
+            return desc
+            
+    return "No description available."
 
 # Color mapping based on PRD
 # Blue: Party/Entity Information (Who)
